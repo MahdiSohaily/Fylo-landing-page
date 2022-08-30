@@ -136,6 +136,10 @@ p {
   order: 2;
 }
 
+.nav-item a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 40em) {
   .primary-header {
     font-weight: 700;
@@ -255,4 +259,38 @@ blockquote {
 
 .position {
   font-size: 10px;
+}
+
+// 3. Trail Section styles
+.trial {
+  max-width: 55ch;
+}
+
+// footer
+
+footer {
+    font-size: 15px;
+}
+
+.footer-nav {
+  list-style: none;
+  gap: 6rem;
+  columns: 2 !important;
+  -webkit-columns: 2 !important;
+  -moz-columns: 2 !important;
+  padding: 0!important;
+}
+
+footer .nav-item {
+  margin-bottom: 0.7rem;
+}
+
+footer p {
+    text-align: left;
+}
+
+.social-media {
+    display: flex;
+    gap: 1.4em;
+    list-style-type: none;
 }
