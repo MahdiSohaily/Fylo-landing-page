@@ -10615,12 +10615,20 @@ p {
 }
 
 .bg-img {
-  background-image: url("../../images/bg-curve-desktop.svg");
+  background-image: url("../../images/bg-curve-mobile.svg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 40em) {
+  .bg-img {
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
 .desc {
   max-width: 60ch;
 }
@@ -10632,7 +10640,9 @@ p {
   margin-inline: auto;
 }
 
-.quote {
+.quote,
+input,
+button {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.212), 0 0 7px rgba(0, 0, 0, 0.212);
 }
 

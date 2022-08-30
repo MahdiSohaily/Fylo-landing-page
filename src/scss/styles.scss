@@ -66,7 +66,7 @@ $utilities: (
       400: 4.0625rem,
       500: 5rem,
       600: 6rem,
-      650:8rem,
+      650: 8rem,
       700: 11.875rem,
     ),
   ),
@@ -78,7 +78,7 @@ $utilities: (
       400: 4.0625rem,
       500: 5rem,
       600: 6rem,
-      650:8rem,
+      650: 8rem,
       700: 11.875rem,
     ),
   ),
@@ -206,43 +206,53 @@ p {
 
 // 2. second section
 .bg-img {
-  background-image: url("../../images/bg-curve-desktop.svg");
+  background-image: url("../../images/bg-curve-mobile.svg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 40em) {
+  .bg-img {
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
 .desc {
   max-width: 60ch;
 }
 
 .fantasy-link {
-    display: inline-block;
+  display: inline-block;
   text-decoration: none;
   border-bottom: 2px solid hsl(170, 45%, 43%);
   margin-inline: auto;
 }
 
-.quote {
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.212), 0 0 7px rgba(0, 0, 0, 0.212);
+.quote,
+input,
+button {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.212), 0 0 7px rgba(0, 0, 0, 0.212);
 }
 
 blockquote {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .cite {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    line-height: 0.2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 0.2;
 }
 
 .title {
-    font-size: 12px;
-    font-weight: 700;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .position {
-    font-size: 10px;
+  font-size: 10px;
 }
