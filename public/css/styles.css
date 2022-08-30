@@ -10486,9 +10486,14 @@ textarea.form-control-lg {
 }
 .bg-img {
   background-image: url("../../images/bg-curve-desktop.svg");
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
