@@ -87,8 +87,8 @@ $utilities: (
 // Importing Bootstrap framework.
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// custom styles
-// utility classes
+/* custom styles
+ utility classes*/
 img.responsive {
   width: 100%;
   height: auto;
@@ -123,7 +123,6 @@ h6,
 p {
   text-align: center;
 }
-
 p {
   margin-inline: auto;
 }
@@ -202,7 +201,6 @@ p {
   }
 }
 
-// 1. first section
 .intro {
   max-width: 55ch;
   padding-bottom: 1rem;
@@ -267,7 +265,7 @@ blockquote {
 // footer
 
 footer {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .footer-nav {
@@ -276,7 +274,7 @@ footer {
   columns: 2 !important;
   -webkit-columns: 2 !important;
   -moz-columns: 2 !important;
-  padding: 0!important;
+  padding: 0 !important;
 }
 
 footer .nav-item {
@@ -284,11 +282,11 @@ footer .nav-item {
 }
 
 footer p {
-    text-align: left;
+  text-align: left;
 }
 
 .social-media {
-    display: flex;
-    gap: 1.4em;
-    list-style-type: none;
+  display: flex;
+  gap: 1.4em;
+  list-style-type: none;
 }

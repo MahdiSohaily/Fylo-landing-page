@@ -10497,6 +10497,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* custom styles
+ utility classes*/
 img.responsive {
   width: 100%;
   height: auto;
