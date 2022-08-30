@@ -1,6 +1,7 @@
 // Update theme color variables.
 $primary: hsl(243, 87%, 12%);
 $secondary: hsl(238, 22%, 44%);
+$light-gray: hsl(0, 0%, 75%);
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -79,22 +80,112 @@ img.responsive {
 
 .primary-header {
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
-
 .secondary-header {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+
+p {
+  margin-inline: auto;
+}
+
+.first {
+  order: 1;
+}
+
+.second {
+  order: 2;
+}
+
+@media screen and (min-width: 40em) {
+  .primary-header {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+  .secondary-header {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-align: left;
+  }
+
+  p {
+    margin-left: 0;
+  }
+
+  .first {
+    order: 2;
+  }
+
+  .second {
+    order: 1;
+  }
+}
+
+::placeholder {
+  color: $light-gray;
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 // header
+.nav-link {
+  color: $primary;
+  font-size: 14px;
+  padding-inline: 1.5rem;
+}
 
-// 1. first section 
+@media screen and (max-width: 30em) {
+  .navbar-brand {
+    height: 30px;
+    width: 85px;
+  }
+
+  .nav-link {
+    color: $primary;
+    font-size: 14px;
+    padding-inline: 0.8rem;
+  }
+}
+
+// 1. first section
+.intro {
+  max-width: 55ch;
+}
 
 // 2. second section
 .bg-img {
-    background-image: url("../../images/bg-curve-desktop.svg");
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
+  background-image: url("../../images/bg-curve-desktop.svg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.desc {
+  max-width: 60ch;
+}

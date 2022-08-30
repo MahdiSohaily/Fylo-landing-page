@@ -10508,12 +10508,104 @@ img.responsive {
 
 .primary-header {
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .secondary-header {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  text-align: center;
+}
+
+p {
+  margin-inline: auto;
+}
+
+.first {
+  order: 1;
+}
+
+.second {
+  order: 2;
+}
+
+@media screen and (min-width: 40em) {
+  .primary-header {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+  .secondary-header {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+    text-align: left;
+  }
+  p {
+    margin-left: 0;
+  }
+  .first {
+    order: 2;
+  }
+  .second {
+    order: 1;
+  }
+}
+::placeholder {
+  color: hsl(0deg, 0%, 75%);
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.nav-link {
+  color: hsl(243deg, 87%, 12%);
+  font-size: 14px;
+  padding-inline: 1.5rem;
+}
+
+@media screen and (max-width: 30em) {
+  .navbar-brand {
+    height: 30px;
+    width: 85px;
+  }
+  .nav-link {
+    color: hsl(243deg, 87%, 12%);
+    font-size: 14px;
+    padding-inline: 0.8rem;
+  }
+}
+.intro {
+  max-width: 55ch;
 }
 
 .bg-img {
@@ -10521,6 +10613,10 @@ img.responsive {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+.desc {
+  max-width: 60ch;
 }
 
 /*# sourceMappingURL=styles.css.map */
