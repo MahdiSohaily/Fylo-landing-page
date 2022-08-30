@@ -10,20 +10,58 @@ $theme-colors: (
   "light-gray": hsl(0, 0%, 75%),
 );
 
+// font-family
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+// Importing bootstrap partials to add custom functionalities to it.
 // import functions and utility partials
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
 
+// custom container size for extra large
 $custom-container-max-widths: (
-  "xxl": 1440px,
+  "xxl": 1280,
 );
 
 $container-max-widths: map-merge(
-  $custom-container-max-widths,
-  $container-max-widths
+  $container-max-widths,
+  $custom-container-max-widths
 );
 
-// Importing bootstrap partials to add custom functionalities to it.
+// custom font family for headings
+$utilities: (
+  "font-family": (
+    property: font-family,
+    class: ff,
+    values: (
+      raleway: "Raleway",
+    ),
+  ),
+  "padding-top": (
+    property: padding-top,
+    class: pt,
+    values: (
+      400: 4.0625rem,
+      500: 5rem,
+    ),
+  ),
+  "full-height": (
+    property: min-height,
+    class: full,
+    values: (
+      "height": 100vh,
+    ),
+  ),
+);
 
 // Importing Bootstrap framework.
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.bg-img {
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
