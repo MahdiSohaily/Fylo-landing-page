@@ -9,6 +9,7 @@ $theme-colors: (
   "moderate-cyan": hsl(170, 45%, 43%),
   "light-grayish-blue": hsl(240, 75%, 98%),
   "light-gray": hsl(0, 0%, 75%),
+  "white": hsl(0, 0%, 100%),
 );
 
 // font-family
@@ -55,6 +56,30 @@ $utilities: (
     class: full,
     values: (
       "height": 80vh,
+    ),
+  ),
+  "padding": (
+    property: padding,
+    class: p,
+    values: (
+      300: 2rem,
+      400: 4.0625rem,
+      500: 5rem,
+      600: 6rem,
+      650:8rem,
+      700: 11.875rem,
+    ),
+  ),
+  "padding-block": (
+    property: padding-block,
+    class: py,
+    values: (
+      300: 2rem,
+      400: 4.0625rem,
+      500: 5rem,
+      600: 6rem,
+      650:8rem,
+      700: 11.875rem,
     ),
   ),
 );
@@ -162,7 +187,7 @@ p {
 
 @media screen and (max-width: 30em) {
   .navbar-brand {
-    height: 30px;
+    height: 35px;
     width: 85px;
   }
 
@@ -189,4 +214,35 @@ p {
 
 .desc {
   max-width: 60ch;
+}
+
+.fantasy-link {
+    display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid hsl(170, 45%, 43%);
+  margin-inline: auto;
+}
+
+.quote {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.212), 0 0 7px rgba(0, 0, 0, 0.212);
+}
+
+blockquote {
+    font-size: 14px;
+}
+
+.cite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 0.2;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.position {
+    font-size: 10px;
 }
