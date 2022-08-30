@@ -45,13 +45,15 @@ $utilities: (
     values: (
       400: 4.0625rem,
       500: 5rem,
+      600: 6rem,
+      700: 11.875rem,
     ),
   ),
   "full-height": (
     property: min-height,
     class: full,
     values: (
-      "height": 100vh,
+      "height": 80vh,
     ),
   ),
 );
@@ -59,14 +61,40 @@ $utilities: (
 // Importing Bootstrap framework.
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.bg-img {
-    background-image: url("../../images/bg-curve-desktop.svg");
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
+// custom styles
+// utility classes
+img.responsive {
+  width: 100%;
+  height: auto;
 }
 
-img.responsive {
-    width: 100%;
-    height: auto;
+.btn-block {
+  display: block;
+  width: 100%;
 }
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.primary-header {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.secondary-header {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+// header
+
+// 1. first section 
+
+// 2. second section
+.bg-img {
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
