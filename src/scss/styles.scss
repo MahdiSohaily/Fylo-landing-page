@@ -1,1 +1,29 @@
-@import '../../node_modules/bootstrap/scss/bootstrap'
+// Update theme color variables.
+$primary: hsl(243, 87%, 12%);
+$secondary: hsl(238, 22%, 44%);
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "bright-blue": hsl(224, 93%, 58%),
+  "moderate-cyan": hsl(170, 45%, 43%),
+  "light-grayish-blue": hsl(240, 75%, 98%),
+  "light-gray": hsl(0, 0%, 75%),
+);
+
+// import functions and utility partials
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-container-max-widths: (
+  "xxl": 1440px,
+);
+
+$container-max-widths: map-merge(
+  $custom-container-max-widths,
+  $container-max-widths
+);
+
+// Importing bootstrap partials to add custom functionalities to it.
+
+// Importing Bootstrap framework.
+@import "../../node_modules/bootstrap/scss/bootstrap";
