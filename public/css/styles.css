@@ -10606,6 +10606,7 @@ p {
 }
 .intro {
   max-width: 55ch;
+  padding-bottom: 1rem;
 }
 
 .bg-img {
