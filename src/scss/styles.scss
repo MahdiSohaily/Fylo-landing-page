@@ -1,0 +1,292 @@
+// Update theme color variables.
+$primary: hsl(243, 87%, 12%);
+$secondary: hsl(238, 22%, 44%);
+$light-gray: hsl(0, 0%, 75%);
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "bright-blue": hsl(224, 93%, 58%),
+  "moderate-cyan": hsl(170, 45%, 43%),
+  "light-grayish-blue": hsl(240, 75%, 98%),
+  "light-gray": hsl(0, 0%, 75%),
+  "white": hsl(0, 0%, 100%),
+);
+
+// font-family
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+// Importing bootstrap partials to add custom functionalities to it.
+// import functions and utility partials
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// custom container size for extra large
+$custom-container-max-widths: (
+  "xxl": 1280,
+);
+
+$container-max-widths: map-merge(
+  $container-max-widths,
+  $custom-container-max-widths
+);
+
+// custom font family for headings
+$utilities: (
+  "font-family": (
+    property: font-family,
+    class: ff,
+    values: (
+      raleway: "Raleway",
+    ),
+  ),
+  "padding-top": (
+    property: padding-top,
+    class: pt,
+    values: (
+      400: 4.0625rem,
+      500: 5rem,
+      600: 6rem,
+      700: 11.875rem,
+    ),
+  ),
+  "full-height": (
+    property: min-height,
+    class: full,
+    values: (
+      "height": 80vh,
+    ),
+  ),
+  "padding": (
+    property: padding,
+    class: p,
+    values: (
+      300: 2rem,
+      400: 4.0625rem,
+      500: 5rem,
+      600: 6rem,
+      650: 8rem,
+      700: 11.875rem,
+    ),
+  ),
+  "padding-block": (
+    property: padding-block,
+    class: py,
+    values: (
+      300: 2rem,
+      400: 4.0625rem,
+      500: 5rem,
+      600: 6rem,
+      650: 8rem,
+      700: 11.875rem,
+    ),
+  ),
+);
+
+// Importing Bootstrap framework.
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* custom styles
+ utility classes*/
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.primary-header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.secondary-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+p {
+  margin-inline: auto;
+}
+
+.first {
+  order: 1;
+}
+
+.second {
+  order: 2;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 40em) {
+  .primary-header {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+  .secondary-header {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-align: left;
+  }
+
+  p {
+    margin-left: 0;
+  }
+
+  .first {
+    order: 2;
+  }
+
+  .second {
+    order: 1;
+  }
+}
+
+::placeholder {
+  color: $light-gray;
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+// header
+.nav-link {
+  color: $primary;
+  font-size: 14px;
+  padding-inline: 1.5rem;
+}
+
+@media screen and (max-width: 30em) {
+  .navbar-brand {
+    height: 35px;
+    width: 85px;
+  }
+
+  .nav-link {
+    color: $primary;
+    font-size: 14px;
+    padding-inline: 0.8rem;
+  }
+}
+
+.intro {
+  max-width: 55ch;
+  padding-bottom: 1rem;
+}
+
+// 2. second section
+.bg-img {
+  background-image: url("../../images/bg-curve-mobile.svg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 40em) {
+  .bg-img {
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+.desc {
+  max-width: 60ch;
+}
+
+.fantasy-link {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid hsl(170, 45%, 43%);
+  margin-inline: auto;
+}
+
+.quote {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.212), 0 0 7px rgba(0, 0, 0, 0.212);
+}
+
+blockquote {
+  font-size: 14px;
+}
+
+.cite {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 0.2;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.position {
+  font-size: 10px;
+}
+
+// 3. Trail Section styles
+.trial {
+  max-width: 55ch;
+}
+
+// footer
+
+footer {
+  font-size: 15px;
+}
+
+.footer-nav {
+  list-style: none;
+  gap: 6rem;
+  columns: 2 !important;
+  -webkit-columns: 2 !important;
+  -moz-columns: 2 !important;
+  padding: 0 !important;
+}
+
+footer .nav-item {
+  margin-bottom: 0.7rem;
+}
+
+footer p {
+  text-align: left;
+}
+
+.social-media {
+  display: flex;
+  gap: 1.4em;
+  list-style-type: none;
+}
